@@ -1,4 +1,6 @@
-# wordpress-export-to-markdown
+# wordpress-export-to-grav-markdown
+
+## Note: I only modified this until it suited my purposes, it's not complete but it got me close enough. You will need to copy the created folders from the output directory into grav pages and then start arranging them
 
 A script that converts a WordPress export XML file into Markdown files suitable for [Grav](https://getgrav.org/) static site generator.
 
@@ -15,8 +17,8 @@ It is recommended that you drop your WordPress export file into the same directo
 
 Clone and run (this makes repeated runs faster and allows you to tinker with the code). After cloning this repo, open your terminal to the package's directory and run:
 
-```
+```cmd
 npm install && node index.js
 ```
 
-## Options (use default options)
+### Options: use default options (press enter 6 times)
