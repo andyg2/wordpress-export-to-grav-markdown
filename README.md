@@ -9,6 +9,7 @@ Each post is saved as a separate Markdown file with appropriate frontmatter. Ima
 ## Quick Start
 
 You'll need:
+
 - [Node.js](https://nodejs.org/) v12.14 or later
 - Your [WordPress export file](https://wordpress.org/support/article/tools-export-screen/) (be sure to export "All content" if you want to save images and/or pages)
 
@@ -96,24 +97,21 @@ Whether or not to organize output files into folders by month. You'll probably w
 
 Whether or not to save files and images into post folders.
 
-If `true`, the post slug is used for the folder name and the post's Markdown file is named `index.md`. Each post folder will have its own `/images` folder.
+If `true`, the post slug is used for the folder name and the post's Markdown file is named `default.md`. Each post folder will have its own same folder.
 
     /first-post
-        /images
-            potato.png
-        index.md
+        potato.png
+        default.md
     /second-post
-        /images
-            carrot.jpg
-            celery.jpg
-        index.md
-
-If `false`, the post slug is used to name the post's Markdown file. These files will be side-by-side and images will go into a shared `/images` folder.
-
-    /images
         carrot.jpg
         celery.jpg
-        potato.png
+        default.md
+
+If `false`, the post slug is used to name the post's Markdown file. These files will be side-by-side and images will go into a shared folder.
+
+    carrot.jpg
+    celery.jpg
+    potato.png
     first-post.md
     second-post.md
 
@@ -130,9 +128,9 @@ Whether or not to prepend the post date to the post slug when naming a post's fo
 If `--post-folders` is `true`, this affects the folder.
 
     /2019-10-14-first-post
-        index.md
+        default.md
     /2019-10-23-second-post
-        index.md
+        default.md
 
 If `--post-folders` is `false`, this affects the file.
 
@@ -145,7 +143,7 @@ If `--post-folders` is `false`, this affects the file.
 - Type: `boolean`
 - Default: `true`
 
-Whether or not to download and save images attached to posts. Generally speaking, these are images that were uploaded by using **Add Media** or **Set Featured Image** when editing a post in WordPress. Images are saved into `/images`.
+Whether or not to download and save images attached to posts. Generally speaking, these are images that were uploaded by using **Add Media** or **Set Featured Image** when editing a post in WordPress. Images are saved into same directory.
 
 ### Save images scraped from post body content?
 
@@ -153,7 +151,7 @@ Whether or not to download and save images attached to posts. Generally speaking
 - Type: `boolean`
 - Default: `true`
 
-Whether or not to download and save images scraped from `<img>` tags in post body content. Images are saved into `/images`. The `<img>` tags are updated to point to where the images are saved.
+Whether or not to download and save images scraped from `<img>` tags in post body content. Images are saved into same directory. The `<img>` tags are updated to point to where the images are saved.
 
 ### Include custom post types and pages?
 
